@@ -7,11 +7,9 @@ import os
 
 load_dotenv()
 discord_key = os.getenv("KEY")
-
+target_channel_id = os.getenv("CHANNEL")
 
 bot = commands.Bot("!listen")
-
-target_channel_id = 702248031898173480
 
 @tasks.loop(seconds=5)
 async def called_once_a_day():
